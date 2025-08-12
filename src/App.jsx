@@ -9,8 +9,9 @@ function App() {
           {state && (
             <motion.div
               onClick={() => setState(!state)}
-              whileHover={{ scale: 1.3 }}
-              transition={{ duration: 1 }}
+              initial={{opacity:0 , filter:"blur(50px)" , y:-500}}
+              whileInView={{opacity:1 , filter:"blur(0px)" , y:0 }}
+              transition={{ duration: 0.5 }}
               exit={{
                 scale: 0,
                 rotate: 360,
